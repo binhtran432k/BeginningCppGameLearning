@@ -1,43 +1,45 @@
-// Game Stats
-// Demonstrates declaring and initializing variables
+// Game Stats 2.0
+// Demonstrates arithmetic operations with variables
 
 #include <iostream>
-using std::cin;
 using std::cout;
 using std::endl;
 
 int main() {
-    int score;
-    double distance;
-    char playAgain;
-    bool shieldsUp;
+    typedef unsigned int uint;
+    uint score = 5000;
+    cout << "score: " << score << endl;
 
-    short lives, aliansKilled;
+    // altering the value of a variable
+    score = score + 100;
+    cout << "score: " << score << endl;
 
-    score = 0;
-    distance = 1200.76;
-    playAgain = 'y';
-    shieldsUp = true;
-    lives = 3;
-    aliansKilled = 10;
-    double engineTemp = 6572.89;
+    // combined assignment operator
+    score += 100;
+    cout << "score: " << score << endl;
 
-    cout << "\nscore: " << score << endl;
-    cout << "distance: " << distance << endl;
-    cout << "playAgain: " << playAgain << endl;
-    // skipping shieldsUp since you don't generally print Boolean values
+    // increment operators
+    int lives = 3;
+    ++lives;
     cout << "lives: " << lives << endl;
-    cout << "aliansKilled: " << aliansKilled << endl;
-    cout << "engineTemp: " << engineTemp << endl;
 
-    int fuel;
-    cout << "\nHow much fuel? ";
-    cin >> fuel;
-    cout << "fuel: " << fuel << endl;
+    lives = 3;
+    lives++;
+    cout << "lives: " << lives << endl;
 
-    typedef unsigned short int ushort;
-    ushort bonus = 10;
-    cout << "\nbonus: " << bonus << endl;
+    lives = 3;
+    int bonus = ++lives * 10;
+    cout << "lives, bonus = " << lives << ", " << bonus << endl;
+
+    lives = 3;
+    bonus = lives++ * 10;
+    cout << "lives, bonus = " << lives << ", " << bonus << endl;
+
+    //integer wrap around
+    score = 4294967295;
+    cout << "\nscore: " << score << endl;
+    ++score;
+    cout << "score: " << score << endl;
 
     return 0;
 }
