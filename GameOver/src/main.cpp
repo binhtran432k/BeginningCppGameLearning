@@ -6,6 +6,6 @@ using std::cout;
 using std::endl;
 
 int main() {
-    cout << "Game Over!" << endl;
-    return 0;
+  cout << "Game Over!" << endl;
+  return 0;
 }
