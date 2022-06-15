@@ -1,8 +1,9 @@
-// Game Over 2.0
-// Demonstrates a using directive
+// Game Over 3.0
+// Demonstrates a using declaration
 
 #include <iostream>
-using namespace std;
+using std::cout;
+using std::endl;
 
 int main() {
     cout << "Game Over!" << endl;
