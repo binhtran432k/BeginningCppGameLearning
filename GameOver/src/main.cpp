@@ -1,5 +1,6 @@
-// Game Over
-// A first C++ program
+// Game Over 2.0
+// Demonstrates a using directive
+
 #include <iostream>
 using namespace std;
 
